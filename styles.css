@@ -1,0 +1,209 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('Back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    float: left;
+    font-size: 1.5rem;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 80px 0;
+    text-align: center;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 45%;
+}
+.about-col-1 img{
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #090d8a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.about-col-1 img:hover {
+    transform: translateY(-5px);
+}
+.about-col-2{
+    flex-basis: 50%;
+}
+.about-col-2 p{
+    text-align: justify;
+}
+.about-col-2 span{
+    color: red;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: red;
+}
+
+section p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: #333;
+}
+
+/* Add smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button animation */
+@keyframes buttonAnimation {
+    0% {
+      background-color: blue;
+      transform: scale(1);
+    }
+    50% {
+      background-color: white;
+      transform: scale(1.1);
+      color: blue;
+    }
+    100% {
+      background-color: blue;
+      transform: scale(1);
+      color: white;
+    }
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: rgb(88, 88, 88);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.5s;
+    border-radius: 10px;
+  }
+  
+  .btn:hover {
+    animation: buttonAnimation 2s infinite;
+  }
+  
+
+
+.portfolio-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    max-width: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #090d8a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.outline{
+    flex-basis: 50%;
+}
+.outline p{
+    text-align: justify;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+}
